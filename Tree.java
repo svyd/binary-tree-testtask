@@ -44,19 +44,7 @@ public class Tree {
 
 	public Node getRoot() {
 		return root;
-	}
-	public void linkNodesAtSameLevel(HashMap < Integer, LinkedList < Node >> hashMap) {
-		for (Integer key: hashMap.keySet()) {
-
-			Node prevNode = null;
-			for (Node node: hashMap.get(key)) {
-				if (prevNode != null) {
-					prevNode.levelPointer = node;
-				}
-				prevNode = node;
-			}
-		}
-	}
+	}	
 
 	public void insert(int id) {
 		Node newNode = new Node(); // make new node
@@ -253,6 +241,19 @@ public class Tree {
 		System.out.println(
 			"......................................................");
 	} // end displayTree()
+	public void linkNodesAtSameLevel(HashMap < Integer, LinkedList < Node >> hashMap) {
+		for (Integer key: hashMap.keySet()) {
+
+			Node prevNode = null;
+			for (Node node: hashMap.get(key)) {
+				if (prevNode != null) {
+					prevNode.levelPointer = node;
+				}
+				prevNode = node;
+			}
+		}
+	}
+	
 	public void linkSameLevel(Node node) {
 		HashMap < Integer, LinkedList < Node >> nodes = new HashMap < Integer, LinkedList < Node >> ();
 		inOrder(node, 0, nodes);
