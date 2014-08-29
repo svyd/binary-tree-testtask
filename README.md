@@ -2,7 +2,7 @@ Test task
 
 Link nodes at same level in a binary tree
 
-For detail description see <a href="../../raw/master/data/Link_nodes_test_description.pdf"><b>Link_nodes_coding_test_description.pdf</b></a> file in data folder
+For detail description see <a href="../../raw/master/data/Link_nodes_test_description.pdf"><b>Link_nodes_test_description.pdf</b></a> file in data folder
 
 <h2>Files:</h2>
 * Node.java - entity class. Includes node definition
